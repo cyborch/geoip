@@ -1,0 +1,9 @@
+{
+  "host": "db",
+  "user": "root",
+  "database": "ip2location",
+  "password": "devel",
+  "waitForConnections": true,
+  "connectionLimit": 10,
+  "queueLimit": 0
+}
