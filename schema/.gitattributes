@@ -1,2 +1,1 @@
-IP2LOCATION-LITE-DB11.CSV.ZIP filter=lfs diff=lfs merge=lfs -text
 *.CSV.ZIP filter=lfs diff=lfs merge=lfs -text
