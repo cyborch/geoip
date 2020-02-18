@@ -2,9 +2,13 @@ version: '3.7'
 services:
   geoip:
     image: geoip
-    build: service
+    build:
+      context: service
+      target: devel
     ports:
       - '3000:3000'
+    environment:
+      - NODE_CONFIG=development
     volumes:
       - './service:/opt/service'
     depends_on:

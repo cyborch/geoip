@@ -1,20 +1,21 @@
 {
   "name": "geoip",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Self hosted reverse geo location",
+  "main": "src/server.js",
   "scripts": {
     "start": "nodemon",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Anders Borch <anders@cyborch.com>",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^4.17.2",
     "express": "^4.17.1",
     "mysql2": "^2.1.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.2",
     "@types/mysql2": "github:types/mysql2",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",

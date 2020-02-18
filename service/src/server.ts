@@ -7,9 +7,12 @@ import { Place } from './model/location';
 const app: express.Application = express();
 
 app.get('/json/', async function (req, res) {
-  const ip = req.headers['x-forwarded-for'] ||
+  let ip = req.headers['x-forwarded-for'] ||
     req.connection.remoteAddress ||
     req.socket.remoteAddress;
+  if (ip instanceof Array) {
+    ip = ip[0];
+  }
   const ipInt = ip2int(ip);
   if (ipInt === 0) {
     return res.status(400).send({
