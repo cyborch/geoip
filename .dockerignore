@@ -1,5 +1,2 @@
-service/node_modules
-service/build
-data
 service/config/db.production.json
 service/config/production-db.sql
