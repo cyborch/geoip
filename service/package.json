@@ -1,6 +1,6 @@
 {
   "name": "geoip",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Self hosted reverse geo location",
   "main": "src/server.js",
   "scripts": {
