@@ -2,7 +2,8 @@ import { createPool } from 'mysql2/promise';
 import { IPLocation } from './model/iplocation.js';
 
 const environment = process.env.NODE_CONFIG || 'development';
-const config = require(`../config/db.${environment}.json`)
+const configPath = process.env.CONFIG_PATH || '../config';
+const config = require(`${configPath}/db.${environment}.json`);
 
 export const connectionPool = createPool(config);
 
