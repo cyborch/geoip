@@ -15,8 +15,8 @@ with zero external dependencies.
 
 ## Request and response format
 
-A `GET` request to `/json/` yields a response formatted as a [Place](https://schema.org/Place)
-with the location matching the client ip.
+A `GET` request to `/json/` or to `/json/xx.xx.xx.xx` yields a response formatted as a [Place](https://schema.org/Place)
+with the location matching the client ip or the ip given in place of `xx.xx.xx.xx`.
 
 *Example response:*
 
