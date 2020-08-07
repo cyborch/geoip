@@ -1,4 +1,6 @@
-import { IPLocation } from './iplocation';
+import { IMysqlIPLocation } from './iplocation/mysql';
+import { IMongoIPLocation } from './iplocation/mongo';
+import { IPLocation } from '../db';
 
 export interface Geo {
   '@type': string; // GeoCoordinates
@@ -40,14 +42,14 @@ export class Place {
     };
     this.address = {
       '@type': 'PostalAddress',
-      postalCode: location.zip_code,
-      addressLocality: location.city_name,
-      addressRegion: location.region_name,
-      addressCountry: location.country_code,
+      postalCode: (location as IMongoIPLocation).zipCode || (location as IMysqlIPLocation).zip_code,
+      addressLocality: (location as IMongoIPLocation).cityName || (location as IMysqlIPLocation).city_name,
+      addressRegion: (location as IMongoIPLocation).regionName || (location as IMysqlIPLocation).region_name,
+      addressCountry: (location as IMongoIPLocation).countryCode || (location as IMysqlIPLocation).country_code,
     };
     this.additionalProperty = {
       name: 'timeZone',
-      value: location.time_zone,
+      value: (location as IMongoIPLocation).timeZone || (location as IMysqlIPLocation).time_zone,
     };
   }
 }

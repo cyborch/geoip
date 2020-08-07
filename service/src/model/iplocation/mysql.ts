@@ -1,4 +1,4 @@
-export interface IPLocation {
+export interface IMysqlIPLocation {
   ip_from: number;
   ip_to: number;
   country_code: string;
