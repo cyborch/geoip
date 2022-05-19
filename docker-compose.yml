@@ -1,10 +1,9 @@
 version: '3.7'
 services:
   geoip:
-    image: geoip
+    image: cyborch/geoip:2.0.1-mongo
     build:
       context: service
-      target: devel
     ports:
       - '3000:3000'
     environment:
@@ -15,12 +14,11 @@ services:
       - db
 
   db:
-    image: mysql/mysql-server:5.7
+    image: bitnami/mongodb:4.0-debian-9
     environment:
-      - MYSQL_ROOT_PASSWORD=devel
       - DB_REMOTE_ROOT_NAME=root
       - DB_REMOTE_ROOT_PASS=devel
     ports:
-      - '3306:3306'
+      - '27017:27017'
     volumes:
-      - './data:/var/lib/mysql'
+      - './data:/bitnami/mongodb'

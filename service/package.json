@@ -1,6 +1,6 @@
 {
   "name": "geoip",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Self hosted reverse geo location",
   "main": "src/server.js",
   "scripts": {
@@ -20,5 +20,8 @@
     "nodemon": "^2.0.4",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5"
+  },
+  "volta": {
+    "node": "16.15.0"
   }
 }

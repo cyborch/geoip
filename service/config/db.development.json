@@ -1,9 +1,4 @@
 {
-  "host": "db",
-  "user": "root",
-  "database": "ip2location",
-  "password": "devel",
-  "waitForConnections": true,
-  "connectionLimit": 10,
-  "queueLimit": 0
+  "url": "mongodb://db:27017/ip2location",
+  "provider": "mongo"
 }

@@ -1,2 +1,3 @@
 service/config/db.production.json
 service/config/production-db.sql
+service/node_modules
